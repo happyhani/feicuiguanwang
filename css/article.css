@@ -1,0 +1,128 @@
+.content_wrap {
+	width: 780px;
+	min-height: 700px;
+	margin: 0 auto;
+	background-color: #fff;
+	padding: 70px 160px 220px 160px;
+}
+
+.content_wrap > img {
+	margin-top: 15px;
+	margin: 0 auto;
+	display: block;
+}
+
+.content_wrap > .title_big,
+.content_wrap > h2 {
+	text-align: center;
+	font-size: 54px;
+	color: #311759;
+}
+
+.content_wrap > .title_big {
+	line-height: 60px;
+}
+
+.content_wrap > h2 {
+	font-size: 18px;
+	font-weight: normal;
+ 	font-family: arial, Helvetica, sans-serif;
+ 	letter-spacing: 6px;
+}
+
+.title_list {
+	height: 60px;
+	margin-top: 70px;
+	position: relative;
+	font-size: 30px;
+	color: #311759;
+	background: url(../images/pen_line_long.png) no-repeat -320px 58px;
+}
+
+.title_list .pen {
+	width: 61px;
+	height: 58px;
+	position: absolute;
+	top: 7px;
+	right: 0;
+	background: url(../images/pen_article.png) no-repeat ;
+	cursor: pointer;
+}
+
+.title_list .pen:hover {
+	background-position: -61px 0;
+}
+
+.auther {
+	margin-bottom: 60px;
+	padding-top: 15px;
+	color: #6b6a6f;
+}
+/*点赞*/
+.like_btn_wrap {
+	width: 73px;
+	height: 73px;
+	margin-top: 80px;
+	margin-left: 350px;
+	overflow: hidden;
+}
+.like_showbox {
+	width: 220px;
+}
+.like_btn_wrap .like_btn {
+	width: 73px;
+	height: 73px;
+	float: left;
+	background: url(../images/article_iflike.png) no-repeat;
+	cursor: pointer;
+}
+.like_btn_wrap .like_number {
+	width: 135px;
+	height: 35px;
+	float: left;
+	margin-top: 19px;
+	margin-left: 5px;
+	padding-top: 8px;
+	padding-left: 5px;
+	background: url(../images/article_iflike_nomberbg.png) no-repeat;
+	text-align: center;
+	color: #fff;
+}
+.like_btn_wrap:hover {
+	width: 213px;
+	transition: all 0.5s ease 0s;
+}
+.like_btn_wrap:hover .like_btn {
+	animation: 1s linear 0s normal none 1 running pudding;
+}
+.like_btn_wrap .like_btn_clicked {
+	background-position: 0 -73px;
+	cursor: default;
+	transition: all 0.5s ease 0s;
+}
+.like_tips_wrap {
+	position: relative;
+	margin-top: 54px;
+}
+.like_tips {
+	min-width: 235px;
+	position: absolute;
+	top: 200px;
+	left: 258px;
+	border-radius: 5px;
+	background-color: #f1f2f6;
+	padding: 27px 10px; 
+	font-size: 24px;
+	text-align: center;
+	color: #311759;
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+/*点赞结束*/
+
+.link_footer_img {
+	width: 100%;
+	height: 33px;
+	min-width: 1100px;
+	background: url(../images/map_bottomimg.png) no-repeat top center;
+}

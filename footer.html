@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>2017北京卓新</title>
+		<link rel="stylesheet" type="text/css" href="css/footer.css"/>
+		<script src="js/jquery-1.11.1.js"></script>
+		<script>
+			$(function () {
+				var musicIndex = 0;
+				$('.music').find('span').click(function () {
+					musicIndex++;
+					index = $(this).index();
+					if (navigator.appName=='Microsoft Internet Explorer') {    //IE
+						$('body').append('<bgsound class="myaudio'+musicIndex+'" src="music/sound0'+index+'.mp3" autostart=true loop=false></bgsound>')
+						
+					}else if(navigator.userAgent.indexOf('Firefox')>=0){      //ff
+						$('body').append('<object class="myaudio'+musicIndex+'" data="music/sound0'+index+'.mp3" type="application/x-mplayer2" width="0" height="0">'+
+										'<param name="src" value="music/sound0'+index+'.mp3">'+
+										'<param name="autostart" value="1">'+
+										'<param name="playcount" value="infinite">'+
+										'</object>')
+					}else {                                                   //其他
+						$('body').append('<embed class="myaudio'+musicIndex+'" src="music/sound0'+index+'.mp3" autostart="true" loop="false" hidden="true"></embed>');
+					}
+					
+					//清除点击后的音乐标签
+					var removeIndex = musicIndex;
+					setTimeout(function () {
+						$('.myaudio'+removeIndex).remove();
+					},3000);
+					
+				});
+			})
+		</script>
+	</head>
+	<body>
+		<div class="footer_wrap">
+			<div class="footer">
+				<div class="music">
+					<span style="background-image: url(images/yinyue_duo.png);"></span>
+					<span style="background-image: url(images/yinyue_lai.png);"></span>
+					<span style="background-image: url(images/yinyue_mi.png);"></span>
+					<span style="background-image: url(images/yinyue_fa.png);"></span>
+					<span style="background-image: url(images/yinyue_suo.png);"></span>
+					<span style="background-image: url(images/yinyue_la.png);"></span>
+					<span style="background-image: url(images/yinyue_xi.png);"></span>
+					
+				</div>
+				<div class="music_content">
+					
+				</div>
+				<div class="beian" id="beianshengming">蜀ICP备16002451号</div>
+			</div>
+		</div>
+	</body>
+</html>

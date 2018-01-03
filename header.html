@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/header.css"/>
+		<script src="js/jquery-1.8.3.min.js"></script>
+		<script src="js/move.js"></script>
+		<script>
+			$(function(){
+				$(".nav_piece").hover(function(){
+					$(this).find("ul").stop().slideDown(600,'elasticOut');
+				},function(){
+					$(this).find("ul").stop().slideUp(100);//不写参数，默认400
+				}).click(function(){
+					$(this).addClass("now").find("ul").hide().end().siblings().removeClass("now");
+					//当前选中的元素添加白色小点的背景.now，然后将其ul隐藏，再将当前选中元素的所有兄弟元素去掉白色小点的背景
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<div class="header_wrap">
+			
+			<div class="header">
+				<!--logo开始-->
+				<div class="logo">
+					<img src="images/logo.png"/>
+				</div>
+				<!--logo结束-->
+				<!--导航开始-->
+				<div class="nav_wrap">
+					<!--首页-->
+					<div class="nav_piece now">
+						<h2 onclick="javascript:window.location.href='index.html';">首页</h2>
+						
+					</div>
+					<!--首页结束-->
+					<!--小鸟掌学-->
+					<div class="nav_piece has_downnav">
+						<h2>小鸟掌学<span class="xiajiantou_img"></span></h2>
+						<ul>
+							<li onclick="javascript:window.open('aboutxiaoniao.html');">小鸟掌学主页</li>
+							<li onclick="javascript:window.open('aboutxiaoniao.html#1');">小鸟掌学概述</li>
+							<li onclick="javascript:window.open('aboutxiaoniao.html#2');">对企业的价值</li>
+							<li onclick="javascript:window.open('aboutxiaoniao.html#3');">小鸟掌云</li>
+							<li>微课联盟</li>
+							<li onclick="javascript:window.open('aboutxiaoniao.html#4');">App 下载</li>
+						</ul>
+					</div>
+					<!--小鸟掌学结束-->
+					<!--小鸟动态-->
+					<div class="nav_piece">
+						<h2 onclick="javascript:window.open('list.html?type=xioaniaoNews');">小鸟动态</h2>
+						
+					</div>
+					<!--小鸟动态结束-->
+					
+					<!--企业文化-->
+					<div class="nav_piece has_downnav">
+						<h2>企业文化<span class="xiajiantou_img"></span></h2>
+						<ul>
+							<li onclick="javascript:window.open('article.html?type=companyIdea');">公司理念</li>
+							<li onclick="javascript:window.open('article.html?type=companyCulture');">公司文化</li>
+							<li onclick="javascript:window.open('article.html?type=companyEnvironment');">公司氛围</li>
+						</ul>
+					</div>
+					<!--企业文化结束-->
+					
+					<!--人力资源-->
+					<div class="nav_piece has_downnav">
+						<h2>人力资源<span class="xiajiantou_img"></span></h2>
+						<ul>
+							<li onclick="javascript:window.open('article.html?type=talents');">人才理念</li>
+							<li onclick="javascript:window.open('article.html?type=team');">团队介绍</li>
+							<li onclick="javascript:window.open('article.html?type=joinUs');">招聘信息</li>
+						</ul>
+					</div>
+					<!--人力资源结束-->
+					
+					<!--联系我们-->
+					<div class="nav_piece">
+						<h2 onclick="javascript:window.open('article.html?type=telUs');">联系我们</h2>
+					</div>
+					<!--联系我们结束-->
+					
+				</div>
+				
+				<!--导航结束-->
+				
+				
+				
+			</div>
+			
+		</div>
+	</body>
+</html>

@@ -1,0 +1,84 @@
+/*logo*/
+.header_wrap {
+	background: #221236 url(../images/header_bg.jpg) top center;
+	min-width: 1100px;
+}
+.header {
+	width: 1100px;
+	height: 120px;
+	margin: 0 auto;
+}
+.logo {
+	float: left;
+}
+/*一级导航*/
+.nav_wrap {
+	width: 630px;
+	height: 25px;
+	margin: 0 auto;
+	line-height: 25px;
+	float: right;
+	margin-top: 45px;
+}
+.nav_piece {
+	float: left;
+	position: relative;
+	color: #fff;
+	z-index: 999; /*为了显示在页面最上层*/
+}
+.nav_piece h2 {
+	font-size: 16px;
+	text-align: center;
+	padding: 0 15px;
+	position: relative;
+	cursor: pointer;
+	height: 35px;
+}
+.nav_piece h2:hover {
+	background: url(../images/nav_now_bg.png) no-repeat bottom center;
+}
+
+/*下箭头样式*/
+.now h2 {
+	background: url(../images/nav_now_bg.png) no-repeat bottom center;
+}
+.has_downnav h2 {
+	padding: 0 40px 0 15px;
+}
+
+.has_downnav h2 .xiajiantou_img {
+	position: absolute;
+	display: block;
+	width: 25px;
+	height: 25px;
+	right: 8px;
+	top: 0;
+	background: url(../images/nav_xiajiantou.png) no-repeat;
+	z-index: 999;
+} 
+
+/*二级导航样式*/
+.nav_piece ul {
+	font-size: 15px;
+	position: absolute;
+	top: 35px;
+	left: -16px;
+	width: 180px;
+	line-height: 40px;
+	background: #36264a;
+	color: #fff;
+	cursor: pointer;
+	z-index: 999;
+	display: none;
+}
+.nav_piece ul li {
+	text-align: left;
+	padding-left: 30px;
+	transition: padding-left 0.4s linear 0s; 
+}
+ .nav_piece ul li:hover {
+ 	color: #fff;
+ 	padding-left: 40px;
+ 	transition: padding-left 0.4s ease 0s;
+ 	background: #3498db url(../images/nav_li_bg.png) no-repeat 165px 15px;
+ }
